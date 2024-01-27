@@ -1,0 +1,25 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#color {
+    color: rgb(30, 126, 49);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 300%;
+}
+
+h2, h3 {
+    font-size: 450%;
+    color: rgb(77, 10, 45)
+}
+
+main li {
+    font-weight: 500%;
+    color: rgb(187, 47, 140);
+}
+
+a:hover {
+    color: rgb(189, 18, 47);
+}
