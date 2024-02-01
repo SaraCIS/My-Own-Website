@@ -1,5 +1,23 @@
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1em 0em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-image: linear-gradient(45deg, rgb(48, 185, 43) 0%, aqua 25%, magenta 75%, rgb(83, 7, 83) 100%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    padding: 1em 2em;
+    float: left;
+    width: 20em;
+    height: 15em;
+}
+
+br {
+    clear: left
 }
 
 #color {
@@ -10,16 +28,42 @@ h1 {
     font-size: 300%;
 }
 
-h2, h3 {
-    font-size: 450%;
-    color: rgb(77, 10, 45)
+#names {
+    background-color: skyblue;
+}
+
+#facts {
+    background-color:rgb(227, 141, 181);
+}
+
+body {
+    font-size: larger;
+}
+
+h2,
+h3 {
+    padding: 1%;
+    border: solid;
+    font-size: 200%;
+    text-align: center;
+    color: rgb(45, 3, 25)
 }
 
 main li {
     font-weight: 500%;
-    color: rgb(187, 47, 140);
+    color: rgb(24, 19, 136);
 }
 
 a:hover {
     color: rgb(189, 18, 47);
+}
+
+.color2 {
+    color: blue;
+}
+
+article {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 2px solid greenyellow;
 }
