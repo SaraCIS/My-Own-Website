@@ -1,7 +1,9 @@
 h1 {
     border-top: 2px solid rgb(23, 159, 114);
     border-bottom: 2px solid rgb(23, 159, 114);
+    /* padding above and below and left and right of h1 element */
     padding: 1em 0em;
+    /* aligns text to center of h1 element */
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -24,6 +26,7 @@ img {
 }
 
 br {
+     /* Stop the floating of the page */
     clear: left;
 }
 
@@ -72,6 +75,7 @@ article {
 }
 
 h1 {
+    /* Stop the floating of the h1 element */
     clear: right;
 }
 
@@ -79,7 +83,8 @@ h1 {
     width: 100%;
     margin-top: 1em;
     float: right;
-    list-style-type: none;
+    /* Removes bullets from all ul elements */
+    list-style-type: none; 
     padding: 2.5em;
 }
 
@@ -93,9 +98,12 @@ h1 {
 }
 
 #nav_menu ul li a {
+    /* aligns text to center of a element */
     text-align: center;
+    /* creates border with designated values for a elements */
     border: 2px solid blueviolet;
-    display: block;
+    /* Display that content as a block element */
+    display: block; 
     /* padding above and below a elements */
     padding: 1%;
     text-decoration: none;
@@ -144,3 +152,4 @@ h1 {
             font-size: 80%;
         }
     }
+}
