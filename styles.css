@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(215, 246, 111);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1 {
     border-top: 2px solid rgb(23, 159, 114);
     border-bottom: 2px solid rgb(23, 159, 114);
@@ -10,19 +15,30 @@ h1 {
     margin-top: 2em;
     margin-bottom: none;
     background-image: linear-gradient(45deg, rgb(48, 185, 43) 0%, aqua 25%, magenta 75%, rgb(83, 7, 83) 100%);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 245%;
+    font-family: cursive;
+    font-size: 345%;
 }
+.image {
+    width: 75%;
+    margin: 40px auto; /* center block elements */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align:center;
+} 
 
-img {
+
+#firstimage {
+    padding: 3%;
+    position: absolute; /*stack image*/
     margin-left: 4%;
     margin-top: 2%;
-    border: 30px solid rgb(237, 17, 237);
+    border: 30px solid rgb(27, 184, 77);
     border-radius: 4px;
     box-shadow: 9px 9px 11px 11px black;
     float: left;
-    width: 28%;
-    height: 15%;
+    width: 25%;
+    height: 40%;
 }
 
 br {
@@ -31,14 +47,15 @@ br {
 }
 
 #color {
-    color: rgb(30, 126, 49);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    color: rgb(32, 9, 92);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
     font-style: normal;
     font-size: 300%;
 }
 
 div#sections {
+    /*create flexbox for section*/
     display: flex;
     flex-direction: row;
 }
@@ -49,7 +66,7 @@ div#sections {
 }
 
 #facts {
-    background-color: rgb(227, 141, 181);
+    background-color: rgb(208, 202, 204);
     flex-basis: 50%;
 }
 
@@ -59,11 +76,12 @@ body {
 
 h2,
 h3 {
+    background-color: rgb(163, 220, 172);
+    margin: auto;
     padding: 1%;
     border: solid;
     font-size: 200%;
     text-align: center;
-    color: rgb(45, 3, 25)
 }
 
 main li {
@@ -128,6 +146,12 @@ h1 {
 
 #nav_menu ul li a.current {
     color: white
+}
+
+@media only screen and (max-width: 963px) {
+    #color {
+        font-size: 200%;
+    }
 }
 
 @media only screen and (max-width: 1020px) {
