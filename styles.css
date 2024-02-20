@@ -10,6 +10,7 @@ main {
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: rgb(229, 249, 6);
+    /*grid template code*/
     display: grid;
     grid-template-columns: 30px 30px 1fr 30px;
     grid-template-rows: 120px .5fr .2fr 1fr 60px;
