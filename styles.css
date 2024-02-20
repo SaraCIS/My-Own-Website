@@ -1,6 +1,36 @@
+main {
+    margin: auto;
+    align-content: center;
+    background-color: rgb(149, 183, 213);
+}
+
 body {
-    background-color: rgb(215, 246, 111);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 250px fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 60px;
+    grid-gap: 16px;
+    grid-template-areas:
+        "navi navi navi navi"
+        "head head head head"
+        "sec1 sec1 sec1 sec1"
+        "sec2 sec2 sec2 sec2"
+        "foot foot foot foot";
+}
+
+nav {
+    grid-area: navi;
+}
+
+header {
+    grid-area: head;
+}
+
+#sections {
+    grid-area: sec2;
+}
+
+footer {
+    grid-area: foot;
 }
 
 h1 {
@@ -18,19 +48,27 @@ h1 {
     font-family: cursive;
     font-size: 345%;
 }
+
 .image {
+    grid-area: sec1;
     width: 75%;
-    margin: 40px auto; /* center block elements */
+    margin: auto;
+    /* center block elements */
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align:center;
-} 
+    text-align: center;
+}
 
+.bold {
+    font-size: larger;
+    font-weight: 700;
+}
 
 #firstimage {
     padding: 3%;
-    position: absolute; /*stack image*/
+    position: absolute;
+    /*stack image*/
     margin-left: 4%;
     margin-top: 2%;
     border: 30px solid rgb(27, 184, 77);
@@ -54,7 +92,7 @@ br {
     font-size: 300%;
 }
 
-div#sections {
+#sections {
     /*create flexbox for section*/
     display: flex;
     flex-direction: row;
@@ -74,11 +112,16 @@ body {
     font-size: 100%;
 }
 
+#read {
+    font-size: larger;
+}
+
 h2,
 h3 {
+    clear: right;
     background-color: rgb(163, 220, 172);
-    margin: auto;
-    padding: 1%;
+    margin: 2em;
+    padding: 5%;
     border: solid;
     font-size: 200%;
     text-align: center;
