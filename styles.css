@@ -1,20 +1,25 @@
 main {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-area: sec2;
+    clear: none;
+    scale: 100%;
     margin: auto;
-    align-content: center;
     background-color: rgb(149, 183, 213);
 }
 
 body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(229, 249, 6);
     display: grid;
-    grid-template-columns: 250px fr 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr 1fr 60px;
-    grid-gap: 16px;
+    grid-template-columns: 30px 30px 1fr 30px;
+    grid-template-rows: 120px .5fr .2fr 1fr 60px;
+    grid-gap: 2px;
     grid-template-areas:
         "navi navi navi navi"
         "head head head head"
         "sec1 sec1 sec1 sec1"
         "sec2 sec2 sec2 sec2"
-        "foot foot foot foot";
+        "none foot foot foot";
 }
 
 nav {
@@ -25,38 +30,33 @@ header {
     grid-area: head;
 }
 
-#sections {
-    grid-area: sec2;
-}
-
 footer {
     grid-area: foot;
 }
 
 h1 {
+    padding: 1em;
     border-top: 2px solid rgb(23, 159, 114);
     border-bottom: 2px solid rgb(23, 159, 114);
     /* padding above and below and left and right of h1 element */
     padding: 1em 0em;
     /* aligns text to center of h1 element */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    margin-bottom: none;
+    margin: 1em;
     background-image: linear-gradient(45deg, rgb(48, 185, 43) 0%, aqua 25%, magenta 75%, rgb(83, 7, 83) 100%);
     font-family: cursive;
     font-size: 345%;
 }
 
+
 .image {
     grid-area: sec1;
-    width: 75%;
+    width: 70%;
+    margin-right: 3%;
     margin: auto;
     /* center block elements */
     display: flex;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
 }
 
@@ -66,17 +66,24 @@ h1 {
 }
 
 #firstimage {
-    padding: 3%;
     position: absolute;
     /*stack image*/
-    margin-left: 4%;
-    margin-top: 2%;
-    border: 30px solid rgb(27, 184, 77);
-    border-radius: 4px;
+    margin-left: 8%;
+    margin-right: 38%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 12px solid rgb(52, 157, 198);
+    border-radius: 1em;
     box-shadow: 9px 9px 11px 11px black;
     float: left;
-    width: 25%;
-    height: 40%;
+    width: 277px;
+    height: 222px;
+}
+
+#secondimage {
+    padding: 1%;
+    width: 150%;
+    height: 80%;
 }
 
 br {
@@ -93,6 +100,9 @@ br {
 }
 
 #sections {
+    grid-area: sec2;
+    width: auto;
+    height: auto;
     /*create flexbox for section*/
     display: flex;
     flex-direction: row;
@@ -116,11 +126,18 @@ body {
     font-size: larger;
 }
 
+p {
+    margin-left: 1.5%;
+}
+
+ul {
+    margin-left: 2.2%;
+}
+
 h2,
 h3 {
-    clear: right;
     background-color: rgb(163, 220, 172);
-    margin: 2em;
+    margin: .5em;
     padding: 5%;
     border: solid;
     font-size: 200%;
@@ -139,7 +156,7 @@ a:hover {
 article {
     column-count: 3;
     column-gap: 35px;
-    column-rule: 2px solid greenyellow;
+    column-rule: 2px solid rgb(31, 6, 114);
 }
 
 h1 {
