@@ -10,53 +10,94 @@ human in the works behind this informational website.-->
     <meta name="description" content="Facts about dragonflies">
     <title>Dragonflies</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/dragonfly.jpg">
+    <script src="https://kit.fontawesome.com/e4ef9ecec9.js" crossorigin="anonymous"></script>
 </head>
 <br>
 
 <body>
-    <nav id="nav_menu">
+    <nav id="nav_list">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="names.html">Names</a></li>
-            <li><a href="facts.html" class="current">Facts</a></li>
-            <li><a href="blog.html" class="lastitem">Blog</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
     <br>
     <header>
-        <h1>Welcome to the World of Dragonflies</h1>
+        <h1 class="kanit-black"><i class="fa-solid fa-star-of-life"></i>
+            <p></p>Welcome to the World of Dragonflies
+        </h1>
     </header>
 
-
-    <div class="image"> <img src="images/dance_of_the_dragonflies.png" id="firstimage">
-        <img src="images/brushstrokes.jpg" id="secondimage">
-    </div>
-
-    <main>
-        <p>Dragonflies are <em>intriguing</em> insects.</p>
+    <main id="s1">
+        <p id="f-line">Dragonflies are <em>intriguing</em> insects.</p>
         <div class="body">
-            <p id="color2">But when you've had enough of learning about dragonflies, check out my blog <a
-                    href="blog.html">here</a> and
-                you can still continue being intrigued.</p>
+            <p id="color2">But when you've had enough of learning about dragonflies, check out my blog
+                <a href="blog.html">here</a> and you can still continue being intrigued.
+            </p>
             <div id="sections">
                 <section id="names">
                     <h2>Names - What are what you are seeing called?</h2>
+                    <!--Table inserted here-->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="left">Name</th>
+                                <th>Scientific Name</th>
+                                <th>Region Found</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="left">Western Meadowhawk</td>
+                            <td>Sympetrum occidentale</td>
+                            <td>Western North America</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Eastern Pondhawk</td>
+                            <td>Erythemis simplicicollis</td>
+                            <td>Eastern two-thirds of the United States and Southern Ontario and Quebec, Canada</td>
+                        </tr>
+                        <tr>
+                            <td class="left">Blue Dasher</td>
+                            <td>Pachydiplax longipennis</td>
+                            <td>Widespread throughout North America and Bahamas</td>
+                        </tr>
+                    </table>
+
+                    <!--code previously used for list of dragonfly names
                     <ul>
+                        <p></p>
                         <li>Western Meadowhawk</li>
+                        <p></p>
                         <li>Eastern Pondhawk</li>
+                        <p></p>
                         <li>Common Whitetail</li>
+                        <p></p>
                         <li>Blue Dasher</li>
+                        <p></p>
                         <li>Red-veined Darter</li>
-                    </ul>
+                        <p></p>
+                    </ul>-->
+
                 </section>
 
                 <section id="facts">
                     <h3>Facts - The accepted truth of what exists.</h3>
                     <ul>
+                        <p></p>
                         <li>An insect</li>
+                        <p></p>
                         <li>Ability to fly in all directions</li>
+                        <p></p>
                     </ul>
                 </section>
             </div>

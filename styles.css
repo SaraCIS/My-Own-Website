@@ -1,95 +1,117 @@
 /*code for main content area of webpage*/
 main {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    grid-area: sec2;
     clear: none;
     scale: 100%;
     margin: auto;
     background-color: rgb(149, 183, 213);
 }
 
-/*code for body of webpage, includes the grid layout of webpage*/
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(229, 249, 6);
-    /*grid template code*/
-    display: grid;
-    grid-template-columns: 30px 30px 1fr 30px;
-    grid-template-rows: 120px .5fr .2fr 1fr 60px;
-    grid-gap: 2px;
-    grid-template-areas:
-        "navi navi navi navi"
-        "head head head head"
-        "sec1 sec1 sec1 sec1"
-        "sec2 sec2 sec2 sec2"
-        "none foot foot foot";
+img {
+    width: 17%;
+    padding: 2%;
 }
 
-nav {
-    grid-area: navi;
+/*CSS for table*/
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: .2em 7.em;
+    text-align: center;
+}
+
+th.left,
+td.left {
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(143, 131, 154);
+}
+
+/*code for body of webpage, includes the grid layout of webpage*/
+body {
+    background-image: url(images/background.png);
+    background-repeat: repeat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*grid template code*/
+    display: grid;
+    grid-template-columns: [body-start nav-start] .45fr [nav-end sec-start] 1fr [sec3-start] 1fr [sec-end body-end];
+    grid-template-rows: [row1-start] .1fr [row2-start] 1fr [row3-start] 1fr [row4-start] 60px [rows-end];
+    grid-gap: 16px;
+}
+
+#f-line {
+    font-size: larger;
+}
+
+#color2 {
+    font-size: large;
+}
+
+#blog-article {
+    padding: .5em 1.5em 1.75em 1.5em;
 }
 
 header {
-    grid-area: head;
+    grid-row: row1-start/row2-start;
+    grid-column: body-start/body-end;
+}
+
+nav {
+    grid-row: row2-start/row4-start;
+    grid-column: nav-start/nav-end;
+}
+
+#s1 {
+    grid-row: row2-start/row3-start;
+    grid-column: sec-start/sec-end;
+}
+
+#s2 {
+    grid-row: row3-start/row4-start;
+    grid-column: sec-start/sec-end;
+}
+
+#s3 {
+    grid-row: row3-start/row4-start;
+    grid-column: sec3-start/sec-end;
 }
 
 footer {
-    grid-area: foot;
+    grid-row: row4-start/rows-end;
+    grid-column: body-start/body-end;
 }
+
+.kanit-black {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
 
 /*heading*/
 h1 {
     padding: 1em;
-    border-top: 2px solid rgb(23, 159, 114);
-    border-bottom: 2px solid rgb(23, 159, 114);
+    border: 12px solid rgb(63, 3, 38);
     /* padding above and below and left and right of h1 element */
     padding: 1em 0em;
     /* aligns text to center of h1 element */
     text-align: center;
     margin: 1em;
-    background-image: linear-gradient(45deg, rgb(48, 185, 43) 0%, aqua 25%, magenta 75%, rgb(83, 7, 83) 100%);
-    font-family: cursive;
+    background-image: linear-gradient(45deg, rgb(108, 3, 38) 0%, rgb(173, 32, 32) 25%, rgb(4, 13, 133) 75%, rgb(83, 7, 83) 100%);
     font-size: 345%;
-}
-
-/*The formatting and position of images*/
-.image {
-    grid-area: sec1;
-    width: 70%;
-    margin-right: 3%;
-    margin: auto;
-    /* center block elements */
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    color: yellow;
 }
 
 .bold {
-    font-size: larger;
     font-weight: 700;
-}
-
-/*Image of Dragonflies*/
-#firstimage {
-    position: absolute;
-    /*stack image*/
-    margin-left: 8%;
-    margin-right: 38%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border: 12px solid rgb(52, 157, 198);
-    border-radius: 1em;
-    box-shadow: 9px 9px 11px 11px black;
-    float: left;
-    width: 277px;
-    height: 222px;
-}
-
-/*Background image of stacked image*/
-#secondimage {
-    padding: 1%;
-    width: 150%;
-    height: 80%;
+    font-size: larger;
 }
 
 br {
@@ -107,7 +129,6 @@ br {
 
 /*flexboxes, #sections, #names, #facts*/
 #sections {
-    grid-area: sec2;
     width: auto;
     height: auto;
     /*create flexbox for section*/
@@ -151,11 +172,6 @@ h3 {
     text-align: center;
 }
 
-main li {
-    font-weight: 500%;
-    color: rgb(24, 19, 136);
-}
-
 a:hover {
     color: rgb(189, 18, 47);
 }
@@ -172,88 +188,80 @@ h1 {
 }
 
 /*Navigation Menu*/
-#nav_menu ul {
-    /* width was set at 100% */
-    display: flex;
-    flex-direction: row;
-    margin-top: 1em;
-    /* float was set at right */
-    /* Removes bullets from all ul elements */
+#nav_list ul {
     list-style-type: none;
-    padding: 2.5em;
 }
 
-#nav_menu ul li {
-    /* width was at 20% and float at left */
-    flex-basis: 20%;
-    border-left: 3px solid blueviolet;
-    border-right: 3px solid blueviolet;
-    border-top: 3px solid rgb(23, 159, 114);
-    border-bottom: 3px solid rgb(23, 159, 114);
+#nav_list ul li {
+    border: 7px solid blue;
 }
 
-#nav_menu ul li a {
-    /* aligns text to center of a element */
-    text-align: center;
-    /* creates border with designated values for a elements */
-    border: 2px solid blueviolet;
+#nav_list ul li a {
+    background-color: yellowgreen;
     /* Display that content as a block element */
     display: block;
-    /* padding above and below a elements */
-    padding: 1%;
+    /* padding around elements */
+    padding: 2.5em;
     text-decoration: none;
-    background-color: blue;
-    color: white;
     font-weight: bold;
-}
-
-#nav_menu ul li a.lastitem {
-    border-right: none;
-}
-
-#nav_menu ul li a.current {
-    color: white
+    color: blue;
 }
 
 /*End of Navigation Menu code*/
 
 /*Media queries*/
-@media only screen and (max-width: 963px) {
-    #color {
-        font-size: 200%;
+
+@media only screen and (max-width: 666px) {
+    body {
+        display: flex;
+        /*make the header a flexbox */
+        flex-direction: column;
+        /*display flex items in a column */
+        align-items: center;
+        /*center each item within the column */
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    nav {
+        order: 1
+    }
+
+    #s1 {
+        order: 2
+    }
+
+    #s2 {
+        order: 3
+    }
+
+    #s3 {
+        order: 4
     }
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 603px) {
 
     h2,
     h3 {
-        font-size: 110%;
+        font-size: smaller;
     }
 }
 
-@media only screen and (max-width: 709px) {
-
-    h2,
-    h3 {
-        font-size: 90%;
+@media only screen and (max-width: 459px) {
+    article {
+        column-count: 2;
     }
 
-    @media only screen and (max-width: 885px) {
-        #color {
-            font-size: 210%;
-        }
+    table {
+        font-size: small;
     }
+}
 
-    @media only screen and (max-width: 665px) {
-        #color {
-            font-size: 165%;
-        }
-    }
-
-    @media only screen and (max-width: 1001px) {
-        #color2 {
-            font-size: 80%;
-        }
+@media only screen and (max-width: 392px) {
+    #facts {
+        font-size: smaller;
     }
 }
