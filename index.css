@@ -1,0 +1,68 @@
+/*CSS for table*/
+table {
+    margin: 3% 2%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: .2em 7.em;
+    text-align: center;
+}
+
+th.left,
+td.left {
+    text-align: left;
+}
+
+thead {
+    background-color: rgb(143, 131, 154);
+}
+
+/*End of CSS for table*/
+
+#s1 {
+    border: 10px solid rgb(223, 102, 152);
+    margin: 1.5%;
+}
+
+#f-line {
+    font-size: larger;
+}
+
+#color2 {
+    font-size: large;
+}
+
+#names {
+    background-color: skyblue;
+    flex-basis: 50%;
+}
+
+#sections {
+    width: auto;
+    height: auto;
+    /*create flexbox for section*/
+    display: flex;
+    flex-direction: row;
+}
+
+#facts {
+    background-color: rgb(208, 202, 204);
+    flex-basis: 50%;
+}
+
+/*Unordered List*/
+ul {
+    margin-top: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+ul.none {
+    list-style-type: none;
+}
+
+/*End of Unordered List code*/

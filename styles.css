@@ -1,9 +1,10 @@
 /*code for main content area of webpage*/
 main {
+    border: 10px solid rgb(223, 102, 152);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     clear: none;
     scale: 100%;
-    margin: auto;
+    margin: 1.5%;
     background-color: rgb(149, 183, 213);
 }
 
@@ -12,39 +13,32 @@ img {
     padding: 2%;
 }
 
-/*CSS for table*/
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
+/*Navigation Menu*/
+
+nav {
+    margin: 5%;
 }
 
-th,
-td {
-    border: 1px solid black;
-    padding: .2em 7.em;
-    text-align: center;
-}
-
-th.left,
-td.left {
-    text-align: left;
-}
-
-thead {
-    background-color: rgb(143, 131, 154);
-}
-
-/*End of CSS for table*/
-
-ul {
-    margin-top: 10%;
-    margin-right: 10%;
-    text-align: center;
-}
-
-ul.none {
+#nav_list ul {
     list-style-type: none;
 }
+
+#nav_list ul li {
+    border: 7px solid rgb(223, 102, 152);
+}
+
+#nav_list ul li a {
+    background-color: yellowgreen;
+    /* Display that content as a block element */
+    display: block;
+    /* padding around elements */
+    padding: 2.5em;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(44, 8, 8);
+}
+
+/*End of Navigation Menu code*/
 
 /*code for body of webpage, includes the grid layout of webpage*/
 body {
@@ -58,18 +52,6 @@ body {
     grid-gap: 16px;
 }
 
-#f-line {
-    font-size: larger;
-}
-
-#color2 {
-    font-size: large;
-}
-
-#blog-article {
-    padding: .5em 1.5em 1.75em 1.5em;
-}
-
 header {
     grid-row: row1-start/row2-start;
     grid-column: body-start/body-end;
@@ -81,18 +63,8 @@ nav {
 }
 
 #s1 {
-    grid-row: row2-start/row3-start;
+    grid-row: row2-start/row4-start;
     grid-column: sec-start/sec-end;
-}
-
-#s2 {
-    grid-row: row3-start/row4-start;
-    grid-column: sec-start/sec-end;
-}
-
-#s3 {
-    grid-row: row3-start/row4-start;
-    grid-column: sec3-start/sec-end;
 }
 
 footer {
@@ -115,30 +87,22 @@ footer {
     font-style: normal;
 }
 
-
-
 /*heading*/
 h1 {
-    padding: 1em;
-    border: 12px solid rgb(63, 3, 38);
-    /* padding above and below and left and right of h1 element */
-    padding: 1em 0em;
+    padding: .5em;
+    border: 12px solid rgb(223, 102, 152);
     /* aligns text to center of h1 element */
     text-align: center;
-    margin: 1em;
-    background-color: rgb(27, 10, 24);
+    margin: .25em 1% 0em;
+    background-color: rgb(91, 9, 91);
     /*
     background-image: linear-gradient(45deg, rgb(108, 3, 38) 0%, rgb(173, 32, 32) 25%, rgb(4, 13, 133) 75%, rgb(83, 7, 83) 100%);
     */
     font-size: 345%;
     font-weight: 800;
-    color: rgb(173, 238, 69);
+    color: yellow;
     /* Stop the floating of the h1 element */
     clear: right;
-}
-
-.bold {
-    font-weight: 700;
 }
 
 br {
@@ -146,39 +110,9 @@ br {
     clear: left;
 }
 
-#color {
-    color: rgb(32, 9, 92);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    font-style: normal;
-    font-size: 300%;
-}
-
-/*flexboxes, #sections, #names, #facts*/
-#sections {
-    width: auto;
-    height: auto;
-    /*create flexbox for section*/
-    display: flex;
-    flex-direction: row;
-}
-
-#names {
-    background-color: skyblue;
-    flex-basis: 50%;
-}
-
-#facts {
-    background-color: rgb(208, 202, 204);
-    flex-basis: 50%;
-}
-
 body {
+    margin: 1%;
     font-size: 100%;
-}
-
-#read {
-    font-size: larger;
 }
 
 p {
@@ -193,8 +127,8 @@ h2,
 h3 {
     color: rgb(3, 23, 3);
     background-color: rgb(163, 220, 172);
-    margin: .5em;
-    padding: 5%;
+    padding: .5em;
+    margin: .35em;
     border: solid 5px darkcyan;
     font-size: 200%;
     text-align: center;
@@ -204,33 +138,14 @@ a:hover {
     color: rgb(189, 18, 47);
 }
 
-article {
-    column-count: 3;
-    column-gap: 35px;
-    column-rule: 2px solid rgb(31, 6, 114);
+/*copyright section*/
+#copy {
+    padding: 1.5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(105, 208, 143);
+    border: 7px solid rgb(223, 102, 152);
+    margin: 1.2%;
 }
-
-/*Navigation Menu*/
-#nav_list ul {
-    list-style-type: none;
-}
-
-#nav_list ul li {
-    border: 7px solid blue;
-}
-
-#nav_list ul li a {
-    background-color: yellowgreen;
-    /* Display that content as a block element */
-    display: block;
-    /* padding around elements */
-    padding: 2.5em;
-    text-decoration: none;
-    font-weight: bold;
-    color: blue;
-}
-
-/*End of Navigation Menu code*/
 
 /*Media queries*/
 
@@ -256,16 +171,8 @@ article {
         order: 2
     }
 
-    #s2 {
-        order: 3
-    }
-
-    #s3 {
-        order: 4
-    }
-
     footer {
-        order: 5
+        order: 3
     }
 }
 
@@ -277,10 +184,7 @@ article {
     }
 }
 
-@media only screen and (max-width: 459px) {
-    article {
-        column-count: 2;
-    }
+@media only screen and (max-width: 1100px) {
 
     table {
         font-size: small;
